@@ -10,6 +10,6 @@ app.get('/', function(req, res) {
    res.sendFile(__dirname + "/"); 
 });
 
-app.listen('3000', function() {
+app.listen(process.env.PORT || 3000, function() {
    console.log('Connected to port 3000'); 
 });
