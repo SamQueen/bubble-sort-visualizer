@@ -4,6 +4,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    color: darkslategrey;
+}
+
+body.dark {
+    background-color: #000;
+    color: #ffff;
+}
+
 h1 {
     text-align: center;
     position: absolute;
@@ -27,6 +36,7 @@ h1 {
     margin: 0 0 0 1px;;
     background-color: pink;
     display: inline-block;
+    border-radius: 28px;
 }
 
 .sort {
@@ -59,15 +69,28 @@ h1 {
 button {
     font-size: 15px;
     padding: 5px 10px;
-    border-radius: 28px;
+    border: 1px solid black;
+    border-radius: 5px;
     color: #ffff;
     background-color: #28D82F;
+}
+
+button#dark-button {
+    margin-top: 100px;
+}
+
+button.dark-button {
+    background-color: lightpink;
 }
 
 button:hover {
     cursor: pointer;
     background-color: #69FB70;
     transition: ease 0.5s;
+}
+
+button.dark-hover:hover {
+    background-color: pink;
 }
 
 /*Sliders*/
@@ -106,6 +129,10 @@ button:hover {
   height: 25px; 
   background: #4CAF50; 
   cursor: pointer; 
+}
+
+.dark-slider::-webkit-slider-thumb {
+    background: lightpink;
 }
 
 .slider::-moz-range-thumb {

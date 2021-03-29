@@ -157,9 +157,6 @@ async function bubbleSort() {
 let spaceSize = $('#space').width();
 let spaceHeight = $('#space').height();
 let array = [];
-const tl = new TimelineMax();
-const tl2 = new TimelineMax();
-//Sliders
 let speedSlider = document.getElementById('speedRange');
 let speed = speedSlider.value;
 let sizeSlider = document.getElementById('sizeRange');
@@ -171,7 +168,7 @@ let isSorting = false;
 $('#generate-button').on('click', function() {
     generate();
 });
-$("#bubble-button").on('click', function() {
+$('#bubble-button').on('click', function() {
     if (isSorting === false) {
         bubbleSort();
     }
@@ -181,16 +178,17 @@ $(window).on('resize', function() {
 });
 speedSlider.oninput = function() {
     speed = this.value;
-}
+};
 sizeSlider.oninput = function() {
     size = this.value;
     generate();
-}
+};
+$('#dark-button').on('click', function() {
+    $('body').toggleClass('dark');
+    $('.button').toggleClass('dark-button');
+    $('.button').toggleClass('dark-hover');
+    $('.slider').toggleClass('dark-slider');
+});
 
 //Generate initail array
 generate();
-
-
-
-
-
