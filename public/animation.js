@@ -140,12 +140,14 @@ async function bubbleSort() {
                     );
                 }
             }
+            if(speed > 2) { 
+                await new Promise((resolve) =>
+                    setTimeout(() => {
+                        resolve();
+                    }, time)
+                );
+            }
             
-            await new Promise((resolve) =>
-                setTimeout(() => {
-                    resolve();
-                }, time)
-            );
             bar1.css('background-color', 'pink');
             bar2.css('background-color', 'pink');
         }
